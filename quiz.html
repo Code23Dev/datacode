@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+<style>
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+ button{
+   display: none;
+ }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-color: #0a5973;
+  color: #fff;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 800;
+}
+h1 {
+  text-align: center;
+}
+ 
+.quiz-wrapper {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 30px 50px;
+  /* border: 1px #000 solid; */
+}
+.answer {
+  margin: 10px 0;
+  position: relative;
+}
+.question-wrapper {
+  margin-bottom: 50px;
+}
+.question-wrapper h2 {
+  font-size: 20px;
+  line-height: 25px;
+}
+label {
+  line-height: 20px;
+  vertical-align: middle;
+}
+button,
+input[type="submit"] {
+  background-color: transparent;
+  border: 1px #fff solid;
+  margin: 0 2px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+button:disabled,
+input[type="submit"]:disabled {
+  background-color: #000;
+  color: #fff;
+  cursor: initial;
+}
+input[type="submit"]:disabled {
+  background-color: #999;
+  border-color: #999;
+}
+input[type="radio"] + label::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 2px #fff solid;
+  padding: 5px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+input[type="radio"]:checked + label::before {
+  background-color: #fff;
+  background-clip: content-box;
+}
+button:focus,
+input[type="submit"]:focus,
+input[type="radio"]:focus + label::before {
+  box-shadow: 0 3px 3px rgba(0,0,200,.5);
+}
+input[type="radio"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+input,
+button {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 800;
+}
+</style>
+<body>
+  <h1> Quiz</h1>
+<div class="quiz-wrapper">
+  <form id="quiz">
+    <div class="quiz-navigation">
+      <input type="submit" id="prev" value="prev" class="btn btn-warning" style="background-color: #ffc107;">
+      <input type="submit" id="next" value="next" class="btn btn-warning" style="background-color: #ffc107;">
+    </div>
+  </form>
+</div>
+
+
+<script src="./vendors/main/lognew.js"></script>
+
+<script src="./vendors/main/quizdata.js"></script>
+
+<script>
+
+</script>
+
+
+
+</body>
+</html>

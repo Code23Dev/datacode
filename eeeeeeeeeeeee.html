@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <form action="GET" id="quiz">
+       <div id="divdata"> 
+        
+       </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+let url =window.location.search;
+let c=document.getElementById("divdata")
+let course_id = url.replace(/[^0-9\.]+/g, "");
+  fetch('http://161.97.113.89/api/v1/test/?main_id='+2)
+  .then((response) => response.json())
+  .then((json) => {
+    let arreydata=[];
+    for(let i=0;i<json.length;i++){
+      let pushdata={
+        question:json[i].question,
+        point:json[i].point,
+        quest_test:json[i].quest_test.map(a => a.question)
+      }
+      arreydata.push(pushdata)
+    }
+    for(let i=0;i<json.length;i++){
+      c.innerHTML+=`
+     <p>${i+1}. ${arreydata[i].question}</p>
+    `
+    for(let j=0;j<4;j++){
+
+         c.innerHTML+=`
+         <label for="q">
+          <input type="radio" name="q"  value="d${j}" id="d${j}" class="dgf">
+          ${arreydata[i].quest_test[j]}
+         </label>
+         <br>
+      `
+
+      let yt=`d${j}`
+      console.log(yt)
+      let tf=document.getElementsByTagName("input")
+      tf[yt].addEventListener("click", function(){
+      console.log("ggggg")
+    });
+    }
+  }
+ 
+
+
+
+
+
+
+//------------------------------------------------------- 
+  // let fd=document.querySelectorAll('input[name="q"]');
+  // let d0=document.getElementById("d0")
+  // d0.addEventListener("click", function(){
+   
+  // });
+  // let d1=document.getElementById("d1")
+  // d1.addEventListener("click", function(){
+  //   console.log("B")
+  // });
+  // let d2=document.getElementById("d2")
+  // d2.addEventListener("click", function(){
+  //   console.log("C")
+  // });
+  // let d3=document.getElementById("d3")
+  // d3.addEventListener("click", function(){
+  //   console.log("D")
+  // });
+//-------------------------------------------------------
+
+  // console.log(fd)
+  // for(let gh=0;gh<fd.length;gh++){
+  //   if(gh==0){
+  //     console.log("A")
+  //   }else if(gh==1){
+  //     console.log("B")
+  //   }else if(gh==2){
+  //     console.log("C")
+  //   }else if(gh==3){
+  //     console.log("D")
+  //   }
+  // }
+
+//-------------------------------------------------------
+  }); 
+
+
+  fetch('http://161.97.113.89/api/v1/test/?main_id=2')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+  </script>
+</body>
+</html>
