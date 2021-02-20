@@ -11,7 +11,6 @@ fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
       let bv=json[i].id
       let br=json[i].name
       let coursetopic=document.getElementById('coursetopic')
-
       fetch('http://161.97.113.89/api/v1/pod_topic/?topic_id='+bv)
       .then((response) => response.json())
       .then((data) =>{ 
@@ -30,11 +29,8 @@ fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
           <hr>
           </div>
           `
-
-
         var acc = document.getElementsByClassName("accordion");
         var i;
-    
         for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function() {
         this.classList.toggle("cole");
@@ -47,12 +43,7 @@ fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
         });
         }
       });
-     
     }
-
-
-
-
   });
 
 
