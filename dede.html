@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript: Slider</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+            
+            var i = 0,images = ["http://161.97.113.89/api/v1/content/?topic_id=24","http://161.97.113.89/api/v1/content/?topic_id=25","http://161.97.113.89/api/v1/content/?topic_id=26"];
+                            
+          function mySlide(param)
+          {
+              if(param === 'next')
+              {
+                  i++;
+                  
+                  if(i === images.length){ i = images.length - 1; }
+              }else{
+                  i--;
+                  if(i < 0){ i = 0; }
+              }
+              fetch(images[i])
+          .then((response) => response.json())
+          .then(function (json) {
+            document.getElementById('slide').innerHTML = json[0].id;
+            document.getElementById('slide1').innerHTML = json[0].text;
+
+      })
+          }
+            
+
+        </script>
+    </head>
+    <body>
+        
+        <div>
+            <div  id="slide"></div>
+            <div  id="slide1"></div>
+            <button onclick="mySlide('prev');"><</button>
+            <button onclick="mySlide('next');">></button>
+        </div>
+        
+    </body>
+</html>

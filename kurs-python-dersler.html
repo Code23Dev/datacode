@@ -137,19 +137,7 @@
                     </div>
                 </div>
             </div>
-            <button class="accordion_2">1. Pythona giriş</button>
-            <div class="panel_2">
-              <div class="container-fluid" style="padding-top:5px">
-                <div class="row">
-                  <div class="col-3 cheachboxclass">
-                    <input type="checkbox" id="checkboxId" onclick="clickCheckbox2()" class="padding_element"></div>
-                  <div class="col-6" id="datacorse2">ddd</div>
-                </div>
-              </div>
-            </div>
-    
-
-
+            <div id="coursetopicdata"></div>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script>
                 $(document).ready(function () {
@@ -190,28 +178,25 @@
             </div>
             <hr>
             <p class="input_corse_p" id="datacurse3">
-             
+              <div>
+                <div  id="slide"></div>
+                <div  id="slide1"></div>
+                <!-- <button onclick="mySlide('prev');"><</button>
+                <button onclick="mySlide('next');">></button> -->
+            </div>
             </p>
   
             <div class="d-flex justify-content-center" ; style="text-align: center">
-              <button id="clickButton_input" onclick="window.location.href='./corse_input.html'"
+              <button id="clickButton_input" onclick="mySlide('prev');"
                 class="paner_into_button">Əvvəlki</button>
               <div style="padding: 5px;"></div>
-              <button id="clickButton_input" onclick="window.location.href='./sertifikat.html'"
+              <button id="clickButton_input" onclick="mySlide('next');"
                 class="paner_into_button">Növbəti</button>
             </div>
             <br><br>
-            <!-- <div>
-              <h2 class="input_corse_h2">Bu kurs haqqında nə düşünürsən?</h2>
-             <form>
-              <textarea class="form-control"  rows="5" placeholder="Comment*"></textarea>
-              <br>
-              <button type="button" class="btn btn-primary">Göndər</button>
-             </form>
-            </div> -->
+
           </div>
           <div style=" float: right; padding-right: 20px; display: inline;" >
-            <!-- Default dropup button -->
             <div class="btn-group dropup">
               <img src="https://img.icons8.com/ultraviolet/50/000000/edit.png"class=" dropdown-toggle" data-toggle="dropdown" 
               aria-expanded="false" />
@@ -289,21 +274,11 @@ if ((document.cookie.split( '=' )[1])=="undefined") {
 
 
 
-<!-- Footer -->
 <footer class="page-footer font-small blue pt-4" style="background: #0a5973;">
-
-  <!-- Footer Links -->
   <div class="container-fluid text-center text-md-left footermainclass">
-
-    <!-- Grid row -->
     <div class="row">
-
-      <!-- Grid column -->
       <div class="col-md-3 mt-md-0 mt-3">
-
-        <!-- Content -->
         <h5 class="text-uppercase footer_h5">ÜMUMİ</h5>
-
         <ul class="list-unstyled footer_ul_li_a">
           <li class="footer_li">
             <a href="./haqqimizda.html">Haqqımızda</a>
@@ -314,17 +289,11 @@ if ((document.cookie.split( '=' )[1])=="undefined") {
           <li class="footer_li">
             <a href="faydali.html">Faydalı</a>
           </li>
-
         </ul>
       </div>
-      <!-- Grid column -->
       <hr class="clearfix w-100 d-md-none pb-3">
-      <!-- Grid column -->
       <div class="col-md-3 mb-md-0 mb-3">
-
-        <!-- Content -->
         <h5 class="text-uppercase footer_h5">ÖZÜNÜ YOXLA</h5>
-
         <ul class="list-unstyled footer_ul_li_a">
           <li class="footer_li">
             <a href="calismalar.html">Çalışmalar</a>
@@ -336,21 +305,12 @@ if ((document.cookie.split( '=' )[1])=="undefined") {
             <a href="musahibe-suallari.html">Müsahibə Sualları</a>
           </li>
         </ul>
-
       </div>
-      <!-- Grid column -->
-
       <hr class="clearfix w-100 d-md-none pb-3">
-
-      <!-- Grid column -->
       <div class="col-md-3 mb-md-0 mb-3">
-
-        <!-- Content -->
         <h5 class="text-uppercase footer_h5">ƏLAQƏ</h5>
-
         <ul class="list-unstyled footer_ul_li_a">
           <li class="footer_li">
-
             <a href="mailto:info@codeyourself.com">info@codeyourself.com</a>
           </li>
           <li class="footer_ul_li_a_paddding footer_li">
@@ -362,8 +322,7 @@ if ((document.cookie.split( '=' )[1])=="undefined") {
                 class="fa fa-linkedin-square fonticon"></i></a>
             <a target="_blank" href="https://t.me/codeyourself"  class="noniconfooter"><i class="fa fa-telegram fonticon"></i></a>
             <a target="_blank" href="https://twitter.com/code_yourself"  class="noniconfooter"><i class="fa fa-twitter fonticon" ></i></a>
-<br>
-            <!-- desktop -->
+            <br>
             <a target="_blank" href="https://www.facebook.com/codeyourself1/"  class="noniconfooter2"><img
                 src="./img/iconfooter/iconmonstr-facebook-4-32.png" alt="" ></a>
             <a target="_blank" href="https://www.instagram.com/code_yourself/"><img
@@ -378,20 +337,14 @@ if ((document.cookie.split( '=' )[1])=="undefined") {
           <hr class="clearfix w-100 d-md-none pb-3">
         </ul>
       </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
       <div class="col-md-3 mt-md-0 mt-3">
-
-        <!-- Content -->
         <h5 class="text-uppercase footer_h5">ABUNƏ OL</h5>
         <h4 class="" style="color: rgba(255, 255, 255, 0.76);">Yeniliklərdən xəbərdar ol</h4><br />
-
         <aside class="single-sidebar-widget newsletter_widget">
           <div class="form-group d-flex flex-row">
             <div class="input-group">
               <div class="input-group-prepend">
-                <div class="input-group-text"><i class="ti-email" aria-hidden="true" style="margin-left: -5px; margin-right: 5px;"></i></div>
+                <div class="input-group-text"><i class="ti-email maindata" aria-hidden="true" ></i></div>
               </div>
               <input type="text" class="form-control footerborder" id="inlineFormInputGroup" placeholder="Email"
                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
@@ -400,30 +353,15 @@ if ((document.cookie.split( '=' )[1])=="undefined") {
           </div>
           <div class="br"></div>
         </aside>
-
-
-
-        <!-- Grid row -->
-
       </div>
-      <!-- Grid column -->
-
     </div>
-    <!-- Grid row -->
-
   </div>
-  <!-- Footer Links -->
 </footer>
-<!-- Footer -->
 <footer>
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3" style="background: #104e67; color: white;"> Azərbaycanda <i
-      class="fa fa-heart" style="color:red;font-size: 18px;"></i> ilə hazırlanıb © 2021
+  <div class="footer-copyright text-center py-3 footerenddata" > Azərbaycanda <i
+      class="fa fa-heart footerStact"></i> ilə hazırlanıb © 2021
   </div>
-
-  <!-- Copyright -->
 </footer>
-
 
 
   <script>
@@ -451,9 +389,6 @@ if ((document.cookie.split( '=' )[1])=="undefined") {
         });
     </script>
 
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="./vendors/main/allcourse.js"></script>
   <script src="./vendors/main/index.js"></script>
   <script src="js/jquery-3.2.1.min.js"></script>
@@ -497,18 +432,6 @@ if ((document.cookie.split( '=' )[1])=="undefined") {
       });
     }
   </script>
-
-<!-- <script>
-  let loginNone=document.getElementById("loginNone");
-  let login=true;
-  function data (){
-   if(login=true){
-    loginNone.style.display="none";
-   }
-  }
-  data();
-</script> -->
-
 <script src="./testjs.js"></script>
   <script>
     const login = true;
@@ -562,26 +485,9 @@ if ((document.cookie.split( '=' )[1])=="undefined") {
     }
     clickCheckbox2();
 
-  // let input = document.querySelectorAll('input[type="checkbox"]');
-  // let showValue = document.querySelector('#rating-value');
-
-  // for (let i = 0; i < input.length; i++) {
-  //   input[i];
-  //   if(!login){
-  //     input[i].disabled = true;
-  //     input[i].checked=false;
-  //   }
-  //   else if(login){
-
-  //   }
-  //   // input[i].disabled
-  //   // console.log(input[i].disabled);
-
-  // }
-
   </script>
-  <script src="./vendors/main/curse_input.js"></script>
+<script src="./vendors/main/curse_input.js"></script>
 <script src="./vendors/main/courseDetals.js"></script>
+<script src="./vendors/main/kurs-python-dersler.js"></script>
 </body>
 
-</html>
