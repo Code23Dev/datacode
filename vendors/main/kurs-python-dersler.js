@@ -7,6 +7,11 @@ let x='kurs-python-dersler.html?course_id='+course_id
 fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
   .then((response) => response.json())
   .then((json) => {
+    let hjhjh=document.getElementById("hjhjh")
+    hjhjh.addEventListener("click", function(e){
+     document.getElementById("demo").innerHTML = "Hello World!";
+     e.preventDefault();
+   });
     for(let i=0;i<json.length;i++){
       let bv=json[i].id
       let br=json[i].name
@@ -50,6 +55,7 @@ fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
   });
 
 
+
   var i = 0,images = ["http://161.97.113.89/api/v1/content/?topic_id="+24];
                             
   function mySlide(param)
@@ -73,4 +79,11 @@ fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
   }
 
 
+  fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
+  .then((response) => response.json())
+  .then((ydatay) =>{
+    for(let df=0;df<ydatay.length;df++){
+      console.log(ydatay[df].id)
+    }
+  });
 
