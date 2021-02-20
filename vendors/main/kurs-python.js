@@ -25,7 +25,7 @@ fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
           <div class="panel" >
           <div class="row" style="padding: 5px 16px; width: 600px">
             <div class="col-1"><img src="./img/courses/movzular.svg" alt="" class="img-card"></div>
-            <div class="col-5" id="hhhhhh">${out}<br><a class="paner_into_button" href="${x}">Bax</a></div>       
+            <div class="col-5" id="hhhhhh"><a class="paner_into_button" href="${x}">${out}Bax</a></div>       
           </div>
           <hr>
           </div>
