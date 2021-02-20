@@ -56,7 +56,10 @@ fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
 
 
 
-  var i = 0,images = ["http://161.97.113.89/api/v1/content/?topic_id="+24];
+  var i = 0,images = ["http://161.97.113.89/api/v1/content/?topic_id="+24,
+  "http://161.97.113.89/api/v1/content/?topic_id="+25,
+  "http://161.97.113.89/api/v1/content/?topic_id="+26,
+  "http://161.97.113.89/api/v1/content/?topic_id="+27];
                             
   function mySlide(param)
   {
@@ -79,11 +82,38 @@ fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
   }
 
 
-  fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
-  .then((response) => response.json())
-  .then((ydatay) =>{
-    for(let df=0;df<ydatay.length;df++){
-      console.log(ydatay[df].id)
-    }
-  });
+  // fetch('http://161.97.113.89/api/v1/pod_topic/?topic_id=27')
+  // .then((response) => response.json())
+  // .then((ydatay) =>{
+  //   for(let yi = 0; yi < ydatay.length; yi++){
+  //     let bg=ydatay[yi].id
+  //     console.log(bg)
+  //   fetch('http://161.97.113.89/api/v1/pod_topic/?topic_id='+bg)
+  //   .then((response) => response.json())
+  //   .then((json) => console.log(json));      
+  //   }
+  // });
+
+// -------------------------------
+// fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
+//   .then((response) => response.json())
+//   .then((json) => {
+//     for(let ui = 0; ui < json.length; ui++){
+//       let gf=json[ui].id
+//    fetch('http://161.97.113.89/api/v1/pod_topic/?topic_id='+gf)
+//     .then((response) => response.json())
+//     .then((json) =>{
+//        let fds=[]
+//       json.forEach(element => fds.push(`${element.id}`));
+//       let kld=[]
+//      for(let t=0;t<fds.length;t++){ 
+//       kld.push(fds[t])
+//       console.log(fds[t])
+//    fetch("http://161.97.113.89/api/v1/content/?topic_id="+gf)
+//       .then((response) => response.json())
+//       .then((json) => console.log(json));
+//       }
+//      });
+//     }
+//   });
 
