@@ -1,6 +1,5 @@
 
 let url =window.location.search;
-console.log(url)
 let course_id = url.replace(/[^0-9\.]+/g, "");
 let x='kurs-python-dersler.html?course_id='+course_id
 
@@ -16,18 +15,17 @@ fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
       fetch('http://161.97.113.89/api/v1/pod_topic/?topic_id='+bv)
       .then((response) => response.json())
       .then((data) =>{ 
-        let hj=[]
-        data.forEach(element => hj.push(element.name))
-        let df=document.getElementById("accardion1")
-        for(let p=0;p<hj.length;p++){ df.innerHTML+=`${hj[p]}<a class="paner_into_button" href="${x}">Bax</a><br>`}
-          console.log(hj.length)        
+        let out=[]
+        let fgf=document.getElementById("fgf")
+        data.forEach(element => out.push(`${element.name}`));
+        console.log(out)
           coursetopic.innerHTML+=
           `
           <button class="accordion" id="dataAccardionname1">${br}</button>
           <div class="panel" >
           <div class="row" style="padding: 5px 16px; width: 600px">
             <div class="col-1"><img src="./img/courses/movzular.svg" alt="" class="img-card"></div>
-            <div class="col-5" id="accardion1"></div>       
+            <div class="col-5" id="hhhhhh">${out}<br><a class="paner_into_button" href="${x}">Bax</a></div>       
           </div>
           <hr>
           </div>
@@ -57,16 +55,6 @@ fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
 
   });
 
-
-
-
-
-
-  let words = ['one', 'two', 'three', 'four']
-  words.forEach((word) => {
-    console.log(word)
-      words.shift()
-  })
 
 
 
