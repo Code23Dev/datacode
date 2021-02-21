@@ -153,9 +153,7 @@
       //  .then(json=>document.cookie = "csrftoken=" + json.csrftoken)
       .then(function (data) {
        console.log(document.cookie)
-       dataexport.innerHTML =`
-       <p>${username}</p>
-       `
+       document.location.href = "login.html";
       })
     
   })
