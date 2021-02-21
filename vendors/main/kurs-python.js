@@ -17,15 +17,16 @@ fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
       .then((data) =>{ 
         let out=[]
         let fgf=document.getElementById("fgf")
-        data.forEach(element => out.push(`${element.name}`));
-        for(let t=0;t<out.length;t++){ console.log(out[t])}
+       
+        data.forEach(element => out.push(`<img src="./img/courses/movzular.svg" alt="" class="img-card">${element.name}  <a class="paner_into_button" href="${x}"> Bax</a> <br/>`));
+        console.log(out)
           coursetopic.innerHTML+=
           `
           <button class="accordion" id="dataAccardionname1">${br}</button>
           <div class="panel" >
           <div class="row" style="padding: 5px 16px; width: 600px">
-            <div class="col-1"><img src="./img/courses/movzular.svg" alt="" class="img-card"></div>
-            <div class="col-5" id="hhhhhh"><a class="paner_into_button" href="${x}">${out}Bax</a></div>       
+            
+            <div class="col" id="hhhhhh">${out.join(' ')}</div>       
           </div>
           <hr>
           </div>
@@ -59,3 +60,7 @@ fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
 
 
 
+        //   ${Object.keys(obj).map(function (key) {
+        //     return "<option value='" + key + "'>" + obj[key] + "</option>"           
+        // }).join("")}
+        // ;
