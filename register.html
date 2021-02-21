@@ -2,158 +2,343 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>register</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" href="./img/favicon.svg" type="image/png" />
+  <title>Code yourself - change yourself</title>
+  <!-- Bootstrap CSS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/flaticon.css" />
+  <link rel="stylesheet" href="css/themify-icons.css" />
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
+  <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
+  <!--================ Start Header Menu Area =================-->
+  <header class="header_area">
+
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light" style="padding: 0 12px;">
+        <div class="container-fluid navbar_padding">
+          <!-- Brand and toggle get grouped for better mobile display -->
+
+         
+
+          <a class="navbar-brand logo_h" href="index.html">
+            <img src="img/logoimg/mobillogo.svg" class="topimgnav" height="70">
+           </a> 
+         
+
+          <a href="./index.html"><img src="./img/logoimg/Artboard 1.svg" class="topimgnav2" height="85" width="230" style="padding-bottom: 5px;"> </a>
+
+          <!-- <a href="./index.html"> </a><img src="./img/logoimg/Artboard 1.svg" class="topimgnav2" height="85" width="230" style="padding-bottom: 5px;"> -->
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto">
+              <li class="nav-item matgin_style">
+                <div class="searchbar">
+
+                  <input type="text" placeholder="Axtar...">
+
+                  <div class="icon">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./bloq.html">Bloq</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./login.html">Giriş</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./register.html">Qeydiyyat</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--================ End Header Menu Area =================-->
+
+  <section style="height: 80px;">
+    <div class="banner_inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner_content flout-left">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-5 mt-5">
-        <p style="text-align: center;">Hesabına daxil ol və öyrənməyə davam et!</p>
+<!-- ----------------------------------------------------------- -->
 
-        <form method="POST" id="form">
-          <input type="text" id="username" placeholder="username" class="form-control mt-3" required name="username">
-          <input type="text" id="password" placeholder="password" class="form-control mt-3" required name="password">
-          <input type="text" id="password2" placeholder="password2" class="form-control mt-3" required name="password2">
-          <input type="email" id="email" placeholder="email" class="form-control mt-3" required name="email">
-          <input type="text" id="first_name" placeholder="first_name" class="form-control mt-3" required name="first_name">
-          <input type="text" id="last_name" placeholder="last_name" class="form-control mt-3" required name="last_name">
-          <input type="submit" class="btn btn-primary btn-lg btn-block mt-3" value="Daxil ol">
-        </form>
-        <p id="ffff"></p>
-      </div>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-7 mt-5">
+      <p style="text-align: center;">Qeydiyyatdan keç və öyrənməyə başla!</p>
+
+      <form method="POST" id="form">
+        <input type="text" id="username" placeholder="username" class="form-control mt-3" name="username" required>
+        <input type="text" id="password" placeholder="password" class="form-control mt-3" name="password" required>
+        <input type="text" id="password2" placeholder="password2" class="form-control mt-3" name="password2" required>
+        <input type="email" id="email" placeholder="email" class="form-control mt-3" name="email" required>
+        <input type="text" id="first_name" placeholder="first_name" class="form-control mt-3" name="first_name" required>
+        <input type="text" id="last_name" placeholder="last_name" class="form-control mt-3" name="last_name" required>
+        <input type="submit" class="btn btn-primary btn-lg btn-block mt-3" value="Qeydiyyatdan keç">
+      </form>
+      <p style="margin-top:20px;text-align: center;">Artıq qeydiyyatdan keçmisən?<a href="./login.html"> Daxil ol</a></p>
     </div>
   </div>
+</div>
 
 
-  <!-- <script>
-    var form = document.getElementById('form');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault()
-      var username = document.getElementById('username').value;
-      var password = document.getElementById('password').value;
-      var password2 = document.getElementById('password2').value;
-      var email = document.getElementById('email').value;
-      var first_name = document.getElementById('first_name').value;
-      var last_name = document.getElementById('last_name').value;
-      fetch("http://161.97.113.89/auth/register/", {
-        method: "POST",
-        body: JSON.stringify({
-          username: username,
-          password: password,
-          password2: password2,
-          email: email,
-          first_name: first_name,
-          last_name: last_name
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8"
-        }
-      })
-        .then(response => response.json())
-        .then(json => console.log(json))
+<script>
+  var dataexport=document.getElementById('dataexport');
+  var form = document.getElementById('form');
+  form.addEventListener('submit', function (e) {
+    
+    e.preventDefault()
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    var password2 = document.getElementById('password2').value;
+    var email = document.getElementById('email').value;
+    var first_name = document.getElementById('first_name').value;
+    var last_name = document.getElementById('last_name').value;
+    fetch("http://161.97.113.89/auth/register/", {
+      method: "POST",
+      body: JSON.stringify({
+        username: username,
+        password: password,
+        password2: password2,
+        email: email,
+        first_name: first_name,
+        last_name: last_name
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
     })
-  </script> -->
+    
+      .then(response => response.json())
+      .then(json => console.log(json))
+      //  .then(json=>document.cookie = "csrftoken=" + json.csrftoken)
+      .then(function (data) {
+       console.log(document.cookie)
+       dataexport.innerHTML =`
+       <p>${username}</p>
+       `
+      })
+    
+  })
+</script>
+
+
+<!-- ------------------------------------------------------------- -->
+ 
+  <!-- Footer -->
+  <footer class="page-footer font-small blue pt-4" style="background: #0a5973;margin-top: 40px;">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left footermainclass">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase footer_h5">ÜMUMİ</h5>
+
+          <ul class="list-unstyled footer_ul_li_a">
+            <li class="footer_li">
+              <a href="./haqqimizda.html">Haqqımızda</a>
+            </li>
+            <li class="footer_li">
+              <a href="bloq.html">Bloq</a>
+            </li>
+            <li class="footer_li">
+              <a href="faydali.html">Faydalı</a>
+            </li>
+
+          </ul>
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase footer_h5">ÖZÜNÜ YOXLA</h5>
+
+          <ul class="list-unstyled footer_ul_li_a">
+            <li class="footer_li">
+              <a href="calismalar.html">Çalışmalar</a>
+            </li>
+            <li class="footer_li">
+              <a href="testler.html">Testlər</a>
+            </li>
+            <li class="footer_li">
+              <a href="musahibe-suallari.html">Müsahibə Sualları</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase footer_h5">ƏLAQƏ</h5>
+
+          <ul class="list-unstyled footer_ul_li_a">
+            <li class="footer_li">
+
+              <a href="mailto:info@codeyourself.com">info@codeyourself.com</a>
+            </li>
+            <li class="footer_ul_li_a_paddding footer_li">
+              <a target="_blank" href="https://www.facebook.com/codeyourself1/" class="noniconfooter"><i
+                  class="fa fa-facebook-square fonticon"></i></a>
+              <a target="_blank" href="https://www.instagram.com/code_yourself/" class="noniconfooter"><i
+                  class="fa fa-instagram fonticon"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/code-yourself/" class="noniconfooter"><i
+                  class="fa fa-linkedin-square fonticon"></i></a>
+              <a target="_blank" href="https://t.me/codeyourself"  class="noniconfooter"><i class="fa fa-telegram fonticon"></i></a>
+              <a target="_blank" href="https://twitter.com/code_yourself"  class="noniconfooter"><i class="fa fa-twitter fonticon" ></i></a>
+<br>
+              <!-- desktop -->
+              <a target="_blank" href="https://www.facebook.com/codeyourself1/"  class="noniconfooter2"><img
+                  src="./img/iconfooter/iconmonstr-facebook-4-32.png" alt="" ></a>
+              <a target="_blank" href="https://www.instagram.com/code_yourself/"><img
+                  src="./img/iconfooter/iconmonstr-instagram-11-32.png" alt=""  class="noniconfooter2"></a>
+              <a target="_blank" href="https://www.linkedin.com/company/code-yourself/"><img
+                  src="./img/iconfooter/iconmonstr-linkedin-1-32.png" alt=""  class="noniconfooter2"></a>
+              <a target="_blank" href="https://t.me/codeyourself"><img
+                  src="./img/iconfooter/iconmonstr-telegram-1-32.png" alt=""  class="noniconfooter2"></a>
+              <a target="_blank" href="https://twitter.com/code_yourself"><img
+                  src="./img/iconfooter/iconmonstr-twitter-4-32.png" alt=""  class="noniconfooter2"></a>
+            </li>
+            <hr class="clearfix w-100 d-md-none pb-3">
+          </ul>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase footer_h5">ABUNƏ OL</h5>
+          <h4 class="" style="color: rgba(255, 255, 255, 0.76);">Yeniliklərdən xəbərdar ol</h4><br />
+
+          <aside class="single-sidebar-widget newsletter_widget">
+            <div class="form-group d-flex flex-row">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="ti-email" aria-hidden="true" style="margin-left: -5px; margin-right: 5px;"></i></div>
+                </div>
+                <input type="text" class="form-control footerborder" id="inlineFormInputGroup" placeholder="Email"
+                  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
+              </div>
+              <a href="#" class="bbtns">Təsdiqlə</a>
+            </div>
+            <div class="br"></div>
+          </aside>
+
+
+
+          <!-- Grid row -->
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+  </footer>
+  <!-- Footer -->
+  <footer>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="background: #104e67; color: white;"> Azərbaycanda <i
+        class="fa fa-heart" style="color:red;font-size: 18px;"></i> ilə hazırlanıb © 2021
+    </div>
+
+    <!-- Copyright -->
+  </footer>
+
   <script>
-  
-    var alert=document.getElementById("alert");
-    var form = document.getElementById('form');
-    form.addEventListener('submit', function (e) {
-      //auto submision of the form
-      e.preventDefault()
-    
-      var username = document.getElementById('username').value;
-      var password = document.getElementById('password').value;
-      var password2 = document.getElementById('password2').value;
-      var email = document.getElementById('email').value;
-      var first_name = document.getElementById('first_name').value;
-      var last_name = document.getElementById('last_name').value;
-      fetch('http://161.97.113.89/auth/register/', {
-        method: 'POST',
-        body: JSON.stringify({
-          username: username,
-          password: password,
-          password2: password2,
-          email: email,
-          first_name: first_name,
-          last_name: last_name
-    
-        }),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        }
-      })
-    
-    
-        .then(function (response) {
-          return response.json()
-         
-          
-        })
-
-    
-      
-        .then(json=>document.csrftoken = "csrftoken=" + json.csrftoken)
-        .then(dgd=>console.log(dgd))
-    
-        // .then((data) =>(data)=> { 
-        //   console.log(data)
-        //   console.log("data")
-         
-       
-        //  })
-        //.then(json=>console.log(json))
+    $(".fa-search").click(function () {
+      $(".icon").toggleClass("active");
+      $("input[type='text']").toggleClass("active");
+    });
+  </script>
 
 
-  
-     
-        .then(function (data) {
-          console.log(document.cookie.split( '=' ) )
-          console.log(document.cookie.split( '=' )[1])
 
-         
-          // if (document.cookie.split( '=' )[1]=="undefined") {
-          //   console.log("error")
-          //   alert.innerHTML="login dogru deyil"
-    
-          // } else {
-    
-          //  document.location.href = "profil.html";
-          // }
-    
-         
-        }
-        )
-    
-      
-    })
-    
-    console.log(document.cookie.split( '=' )[2] )
-    </script>
-    <script>
-      fetch('http://161.97.113.89/auth/register/', {
-  method: 'POST',
-  body: JSON.stringify({
-  
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-  .then((response) => response.json())
-  .then((json) => console.log(json));
-    </script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-    crossorigin="anonymous"></script>
+<script src="./vendors/main/mainpage.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="./vendors/main/allcourse.js"></script>
+  <script src="./vendors/main/index.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="js/owl-carousel-thumb.min.js"></script>
+  <script src="js/jquery.ajaxchimp.min.js"></script>
+  <script src="js/mail-script.js"></script>
+  <!--gmaps Js-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+  <script src="js/gmaps.min.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="./vendors/main/main_page_corse.js"></script>
+
+  <script>
+    $(".btn").click(function () {
+      $(".input").toggleClass("active").focus;
+      $(this).toggleClass("animate");
+      $(".input").val("");
+    });
+  </script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="./js/search.js"></script>
+  <script src="./vendors/main/corse_main_api.js"></script>
+
 </body>
 
 </html>

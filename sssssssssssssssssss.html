@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>register</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-5 mt-5">
+        <p style="text-align: center;">Hesabına daxil ol və öyrənməyə davam et!</p>
+
+        <form method="POST" id="form">
+          <input type="text" id="username" placeholder="username" class="form-control mt-3" required name="username">
+          <input type="text" id="password" placeholder="password" class="form-control mt-3" required name="password">
+          <input type="text" id="password2" placeholder="password2" class="form-control mt-3" required name="password2">
+          <input type="email" id="email" placeholder="email" class="form-control mt-3" required name="email">
+          <input type="text" id="first_name" placeholder="first_name" class="form-control mt-3" required name="first_name">
+          <input type="text" id="last_name" placeholder="last_name" class="form-control mt-3" required name="last_name">
+          <input type="submit" class="btn btn-primary btn-lg btn-block mt-3" value="Daxil ol">
+        </form>
+        <p id="ffff"></p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <script>
+    var form = document.getElementById('form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault()
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      var password2 = document.getElementById('password2').value;
+      var email = document.getElementById('email').value;
+      var first_name = document.getElementById('first_name').value;
+      var last_name = document.getElementById('last_name').value;
+      fetch("http://161.97.113.89/auth/register/", {
+        method: "POST",
+        body: JSON.stringify({
+          username: username,
+          password: password,
+          password2: password2,
+          email: email,
+          first_name: first_name,
+          last_name: last_name
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      })
+        .then(response => response.json())
+        .then(json => console.log(json))
+    })
+  </script> -->
+  <script>
+  
+    var alert=document.getElementById("alert");
+    var form = document.getElementById('form');
+    form.addEventListener('submit', function (e) {
+      //auto submision of the form
+      e.preventDefault()
+    
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      var password2 = document.getElementById('password2').value;
+      var email = document.getElementById('email').value;
+      var first_name = document.getElementById('first_name').value;
+      var last_name = document.getElementById('last_name').value;
+      fetch('http://161.97.113.89/auth/register/', {
+        method: 'POST',
+        body: JSON.stringify({
+          username: username,
+          password: password,
+          password2: password2,
+          email: email,
+          first_name: first_name,
+          last_name: last_name
+    
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        }
+      })
+    
+    
+        .then(function (response) {
+          return response.json()
+         
+          
+        })
+
+    
+      
+        .then(json=>document.csrftoken = "csrftoken=" + json.csrftoken)
+        .then(dgd=>console.log(dgd))
+    
+        // .then((data) =>(data)=> { 
+        //   console.log(data)
+        //   console.log("data")
+         
+       
+        //  })
+        //.then(json=>console.log(json))
+
+
+  
+     
+        .then(function (data) {
+          console.log(document.cookie.split( '=' ) )
+          console.log(document.cookie.split( '=' )[1])
+
+         
+          // if (document.cookie.split( '=' )[1]=="undefined") {
+          //   console.log("error")
+          //   alert.innerHTML="login dogru deyil"
+    
+          // } else {
+    
+          //  document.location.href = "profil.html";
+          // }
+    
+         
+        }
+        )
+    
+      
+    })
+    
+    console.log(document.cookie.split( '=' )[2] )
+    </script>
+    <script>
+      fetch('http://161.97.113.89/auth/register/', {
+  method: 'POST',
+  body: JSON.stringify({
+  
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+    </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
