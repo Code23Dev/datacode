@@ -5,9 +5,11 @@
         <meta charset="windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>
-            
-            var i = 0,images = ["http://161.97.113.89/api/v1/content/?topic_id=24","http://161.97.113.89/api/v1/content/?topic_id=25","http://161.97.113.89/api/v1/content/?topic_id=26"];
-                            
+            var i = 0,images=[]            
+            for(let ui=0;ui<5;ui++){
+                images.push("http://161.97.113.89/api/v1/content/?topic_id="+ui)
+            }   
+            console.log(images)           
           function mySlide(param)
           {
               if(param === 'next')
