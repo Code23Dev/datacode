@@ -22,17 +22,14 @@ fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
       .then((data) =>{ 
         let out=[]
         let fgf=document.getElementById("fgf")
-        data.forEach(element => out.push(`${element.name}`));
-        // for(let t=0;t<out.length;t++){ console.log(out[t])}
+        data.forEach(element => out.push(`<input type="checkbox" id="checkboxId" onclick="clickCheckbox2()" class="padding_element">${element.name}<br>`));
           coursetopicdata.innerHTML+=
           `
           <button class="accordion" id="dataAccardionname1">${br}</button>
           <div class="panel_2">
             <div class="container-fluid" style="padding-top:5px">
               <div class="row">
-                <div class="col-3 cheachboxclass">
-                  <input type="checkbox" id="checkboxId" onclick="clickCheckbox2()" class="padding_element"></div>
-                <div class="col-6" id="datacorse2">${out}</div>
+                <div class="col" id="datacorse2">${out.join(' ')}</div>
               </div>
             </div>
           </div>
@@ -80,40 +77,3 @@ fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
 
 })
   }
-
-
-  // fetch('http://161.97.113.89/api/v1/pod_topic/?topic_id=27')
-  // .then((response) => response.json())
-  // .then((ydatay) =>{
-  //   for(let yi = 0; yi < ydatay.length; yi++){
-  //     let bg=ydatay[yi].id
-  //     console.log(bg)
-  //   fetch('http://161.97.113.89/api/v1/pod_topic/?topic_id='+bg)
-  //   .then((response) => response.json())
-  //   .then((json) => console.log(json));      
-  //   }
-  // });
-
-// -------------------------------
-// fetch('http://161.97.113.89/api/v1/topic/?course_id='+course_id)
-//   .then((response) => response.json())
-//   .then((json) => {
-//     for(let ui = 0; ui < json.length; ui++){
-//       let gf=json[ui].id
-//    fetch('http://161.97.113.89/api/v1/pod_topic/?topic_id='+gf)
-//     .then((response) => response.json())
-//     .then((json) =>{
-//        let fds=[]
-//       json.forEach(element => fds.push(`${element.id}`));
-//       let kld=[]
-//      for(let t=0;t<fds.length;t++){ 
-//       kld.push(fds[t])
-//       console.log(fds[t])
-//    fetch("http://161.97.113.89/api/v1/content/?topic_id="+gf)
-//       .then((response) => response.json())
-//       .then((json) => console.log(json));
-//       }
-//      });
-//     }
-//   });
-
