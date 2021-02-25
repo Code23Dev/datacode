@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+  <script>
+      let names = [7,9,10];
+      let topicids=[]
+      let podtopic=[]
+      let podtopicidpush=[]
+      let endtopicidpush=[]
+      let requests = names.map(name => fetch(`http://161.97.113.89/api/v1/topic/?course_id=${name}`));
+      Promise.all(requests)
+        .then(responses => {
+          for(let response of responses) {
+            console.log(`${response.url}: ${response.status}`);
+          }
+          return responses;
+        })
+        .then(responses => Promise.all(responses.map(r => r.json())))
+        .then(users =>{
+          for(let i=0;i<users.length;i++){         
+          users[i].forEach(user => topicids.push(user.id))
+        }
+
+      let requests = topicids.map(id => fetch(`http://161.97.113.89/api/v1/pod_topic/?topic_id=${id}`));
+      Promise.all(requests)
+          .then(responses => {
+            for(let response of responses) {
+              `${response.url}: ${response.status}`; 
+            }
+            return responses;
+          })
+          .then(responses => Promise.all(responses.map(r => r.json())))
+          .then(users => {
+            for(let j=0;j<users.length;j++){
+              podtopic.push(users[j])
+            }
+
+            console.log(podtopic.forEach(user => {
+              user.forEach(podtopicid => podtopicidpush.push(podtopicid.id))
+            }))
+            for(let u=0;u<podtopicidpush.length;u++){
+              endtopicidpush.push(podtopicidpush[u])
+            }
+            console.log(endtopicidpush )
+
+            
+
+      // let requests = podtopicidpush.map(name => fetch(`http://161.97.113.89/api/v1/content/?topic_id=/${name}`));
+      // Promise.all(requests)
+      //   .then(responses => {
+      //     for(let response of responses) {
+      //       console.log(`${response.url}: ${response.status}`); 
+      //     }
+      //     return responses;
+      //   })
+      //   .then(responses => Promise.all(responses.map(r => r.json())))
+      //   .then(users => users.forEach(user => console.log(user.name)));
+
+
+          });
+        });  
+
+
+
+
+    
+    // http://161.97.113.89/api/v1/topic/?course_id=7
+    // http://161.97.113.89/api/v1/pod_topic/?topic_id=20
+
+
+
+  //   let id = [27, , 'jeresig'];
+  //   let requests = id.map(name => fetch(`http://161.97.113.89/api/v1/content/?topic_id=/${id}`));
+  //   Promise.all(requests)
+  //  .then(responses => {
+  //   for(let response of responses) {
+  //     console.log(`${response.url}: ${response.status}`); 
+  //   }
+  //   return responses;
+  //  })
+  //  .then(responses => Promise.all(responses.map(r => r.json())))
+  //  .then(users => users.forEach(user => console.log(user.name)));
+
+
+
+  </script>
+</body>
+</html>
