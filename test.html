@@ -8,17 +8,21 @@
         
     </head>
     <body>
-        <div class="container">
-            <div id="searchWrapper">
-                <input
-                    type="text"
-                    name="searchBar"
-                    id="searchBar"
-                    placeholder="search for a character"
-                />
-            </div>
-            <ul id="charactersList"></ul>
-        </div>
-<script src="./vendors/main/searchApi.js"></script>
+       <script>
+           
+const  getData=  () =>
+    fetch('http://161.97.113.89/api/v1/topic/?course_id=7')
+    .then(response => response.json())
+    .then((results) => results);
+
+
+let movies = '';
+getData().then(data => {
+movies = data
+console.log(data)
+});
+console.log(movies)
+console.log(movies,"test")
+       </script>
     </body>
 </html>
