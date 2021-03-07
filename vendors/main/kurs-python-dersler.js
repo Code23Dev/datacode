@@ -1,8 +1,8 @@
 let url = window.location.search;
 let course_id = url.replace(/[^0-9\.]+/g, "");
 let x = 'kurs-python-dersler.html?course_id=' + course_id
-let course_topic_id = 7
-let y = 'kurs-python-dersler.html?course_id=' + course_id + '+course_topic_id' + course_topic_id
+// let course_topic_id = 7
+// let y = 'kurs-python-dersler.html?course_id=' + course_id + '+course_topic_id' + course_topic_id
 
 
 
